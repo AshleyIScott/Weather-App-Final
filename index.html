@@ -15,22 +15,25 @@
             type="search"
             placeholder="Enter a city"
             required=""
-            class="search-city"
-            id="search-city"
+            class="search-city-input"
+            id="search-city-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Coquitlam</h1>
-          <p>
-            Sunday 16:39, moderate rain
+        <div class="current-weather">
+          <h1 class="city">Coquitlam</h1>
+          <p class="info">
+            <span class="current-day">Sunday</span>
+            <span class="current-time">16:39</span>, moderate rain
             <br />
+
             Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
           </p>
+
+          <div class="current-temp">🌧 7 °C</div>
         </div>
-        <div>🌧 7 °C</div>
       </main>
       <footer>
         coded by
