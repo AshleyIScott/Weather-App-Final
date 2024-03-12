@@ -5,9 +5,17 @@ function city(event) {
   currentCity.innerHTML = searchCityInput.value;
 
   function weather(response) {
-    let temperature = Math.round(response.data.temperature.current);
     let cityTemperature = document.querySelector(".temp-value");
-    cityTemperature.innerHTML = `${temperature}`;
+    cityTemperature.innerHTML = Math.round(response.data.temperature.current);
+
+    let currentConditions = document.querySelector("#current-conditions");
+    currentConditions.innerHTML = response.data.condition.description;
+
+    let humidity = document.querySelector("#humidity");
+    humidity.innerHTML = `${response.data.temperature.humidity}%`;
+
+    let wind = document.querySelector("#wind");
+    wind.innerHTML = `${response.data.wind.speed}km/h`;
   }
   let apiKey = "384o5eb54t8f21820fdceb7ff6b5a26b";
   let query = searchCityInput.value;
