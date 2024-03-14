@@ -15,6 +15,9 @@ function city(event) {
     wind.innerHTML = `${response.data.wind.speed}km/h`;
     let icon = document.querySelector("#temp-icon");
     icon.innerHTML = `<img src="${response.data.condition.icon_url}" id="temp-icon" />`;
+    let currentDay = document.querySelector("#current-day-time");
+    let date = new Date(response.data.time * 1000);
+    currentDay.innerHTML = formatDate(date);
   }
 
   let apiKey = "384o5eb54t8f21820fdceb7ff6b5a26b";
@@ -25,21 +28,21 @@ function city(event) {
 let cityInput = document.querySelector("#search-city");
 cityInput.addEventListener("submit", city);
 
-let now = new Date();
-let hours = now.getHours();
-let minutes = now.getMinutes();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let formattedDay = days[now.getDay()];
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${day} ${hours}:${minutes},`;
 }
-let currentDate = document.querySelector("#current-day");
-currentDate.innerHTML = `${formattedDay} ${hours}:${minutes},`;
