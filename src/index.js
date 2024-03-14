@@ -13,7 +13,10 @@ function city(event) {
     humidity.innerHTML = `${response.data.temperature.humidity}%`;
     let wind = document.querySelector("#wind");
     wind.innerHTML = `${response.data.wind.speed}km/h`;
+    let icon = document.querySelector("#temp-icon");
+    icon.innerHTML = `<img src="${response.data.condition.icon_url}" id="temp-icon" />`;
   }
+
   let apiKey = "384o5eb54t8f21820fdceb7ff6b5a26b";
   let query = searchCityInput.value;
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metric`;
