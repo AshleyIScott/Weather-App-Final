@@ -18,9 +18,9 @@ body {
 }
 
 header {
-  border-bottom: 0.1px solid #a6bcd2;
+  border-bottom: 0.1px solid rgba(205, 226, 234, 0.1);
   text-align: center;
-  padding-bottom: 13px;
+  padding: 20px;
 }
 
 .search-city-input {
@@ -45,12 +45,10 @@ header {
 main {
   padding: 25px 10px;
 }
-
 .weather-data {
   display: flex;
   justify-content: space-between;
 }
-
 #current-city {
   font-size: 45px;
   font-weight: 800;
@@ -63,34 +61,52 @@ main {
 .info strong {
   color: #abcff3;
 }
-
 .current-temp {
   display: flex;
 }
-
 .temp-value {
   font-size: 85px;
   font-weight: 900;
 }
-
 .temp-unit {
   font-size: 25px;
   margin-top: 12px;
 }
-
 .temp-icon {
   width: 100px;
   height: 100px;
 }
+
 footer {
-  border-top: 0.1px solid #a6bcd2;
+  border-top: 0.1px solid rgba(205, 226, 234, 0.1);
   font-size: 14px;
-  padding-top: 10px;
+  padding-top: 13px;
   text-align: center;
 }
-
 a {
   color: #abcff3;
   text-decoration: none;
   font-weight: 525;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px;
+  text-align: center;
+}
+.weather-forecast-day {
+  border: 0.1px solid rgba(205, 226, 234, 0.1);
+  border-radius: 11px;
+  padding: 30px;
+}
+.forecast-day {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+.forecast-low {
+  opacity: 0.5;
+}
+.forecast-low .forecast-hi {
+  font-size: 15px;
 }
