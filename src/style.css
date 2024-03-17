@@ -28,7 +28,7 @@ header {
   border-radius: 8px;
   box-shadow: 4px 4px 26px rgba(0, 0, 0, 0.1);
   font-size: 16px;
-  padding: 7px 25px;
+  padding: 7px 35px;
 }
 .search-button {
   background: #abcff3;
@@ -69,11 +69,11 @@ main {
 }
 .temp-unit {
   font-size: 25px;
-  margin-top: 12px;
+  margin-top: 20px;
 }
 .temp-icon {
   width: 100px;
-  height: 100px;
+  height: 70px;
 }
 
 footer {
